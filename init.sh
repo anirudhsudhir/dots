@@ -16,3 +16,6 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 # starship shell prompt
 curl -sS https://starship.rs/install.sh | sh
 echo 'eval "$(starship init zsh)"' >>~/.zshrc
+
+# tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
