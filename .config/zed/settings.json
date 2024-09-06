@@ -8,8 +8,8 @@
 // from the command palette or from `Zed` application menu.
 {
   "autosave": "on_focus_change",
-  "buffer_font_family": "Victor Mono",
-  "buffer_font_size": 14,
+  "buffer_font_family": "Ligalex Mono",
+  "buffer_font_size": 15,
   "experimental.theme_overrides": {
     "syntax": {
       "comment": {
@@ -29,11 +29,7 @@
     "diagnostics": false,
     "metrics": false
   },
-  "terminal": {
-    "font_family": "Victor Mono"
-  },
-  "theme": "Ayu Dark",
-  "ui_font_family": "Victor Mono",
-  "ui_font_size": 14,
+  "theme": "Solarized Dark",
+  "ui_font_size": 15,
   "vim_mode": true
 }

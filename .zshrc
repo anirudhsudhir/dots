@@ -31,9 +31,27 @@ source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.3
 
+# bun completions
+[ -s "/Users/anirudh/.bun/_bun" ] && source "/Users/anirudh/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 # eval "$(starship init zsh)"
 
 source <(fzf --zsh)
 
 source ~/aliases.sh
 set -o vi
+
+EDITOR=nvim
+VISUAL=nvim
+GIT_EDITOR=nvim
+
+[[ $TERM == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
+[[ $TERM == "xterm-kitty" ]] && alias limactl="TERM=xterm-256color limactl"
+
+unsetopt BEEP
+
+fortune
