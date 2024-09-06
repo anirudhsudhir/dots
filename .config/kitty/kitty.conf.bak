@@ -1,23 +1,30 @@
-font_family      VictorMonoNerdFont-Regular
-bold_font        VictorMonoNerdFont-Bold
-italic_font      VictorMonoNerdFont-Italic
-bold_italic_font VictorMonoNerdFont-BoldItalic
 font_size 16.0
 
 window_alert_on_bell yes
 
-hide_window_decorations yes 
+hide_window_decorations titlebar-only
+window_padding_width 10
 
 tab_powerline_style angled
 
-dynamic_background_opacity yes
-background_opacity 0.7
-background_blur 5
+# dynamic_background_opacity yes
+# background_opacity 0.8
+# background_blur 10
 
 map f1 launch --allow-remote-control kitty +kitten broadcast
+map ctrl+shift+g show_last_command_output
+map f2 launch --stdin-source=@last_cmd_output --stdin-add-formatting --type=overlay less +G -R
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark Hard
+# Alabaster Dark
 include current-theme.conf
 # END_KITTY_THEME
 
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="FiraCode Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS
