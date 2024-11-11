@@ -17,14 +17,13 @@ function Get_appearance()
 end
 
 function Scheme_for_appearance(appearance)
-	-- if appearance:find("Light") then
-	-- 	-- return "Atelier Cave Light (base16)"
-	-- 	return "AtomOneLight"
-	-- else
-	-- 	return "Builtin Dark"
-	-- end
-	--
-	return "Builtin Dark"
+	if appearance:find("Light") then
+		return "flexoki-light"
+	else
+		return "flexoki-dark"
+	end
+
+	-- return "Builtin Dark"
 end
 
 config.color_scheme = Scheme_for_appearance(Get_appearance())

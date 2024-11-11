@@ -15,7 +15,7 @@ alias lh='ls -lah'
 alias v='nvim'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
-alias please_brother=fuck
+alias cv='NVIM_APPNAME="custom-nvim" nvim'
 
 # Build and copy rust debug builds to root
 cbd() {
