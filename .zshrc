@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="sammy"
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -40,8 +38,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/Users/anirudh/.ghcup/env" ] && . "/Users/anirudh/.ghcup/env" # ghcup-env
 
-# eval "$(starship init zsh)"
-
 EDITOR=nvim
 VISUAL=nvim
 GIT_EDITOR=nvim
@@ -62,13 +58,15 @@ bindkey "^X^E" edit-command-line
 
 
 fortune
+eval "$(starship init zsh)"
 
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-PROMPT='%1${vcs_info_msg_0_} ƛ '
-zstyle ':vcs_info:git*' formats " [%b]"
+# autoload -Uz vcs_info
+# precmd_vcs_info() { vcs_info }
+# precmd_functions+=( precmd_vcs_info )
+# setopt prompt_subst
+# PROMPT='%c ƛ '
+# RPROMPT='${vcs_info_msg_0_}'
+# zstyle ':vcs_info:git:*' formats '%b'
 # zstyle ':vcs_info:*' check-for-changes true
 # zstyle ':vcs_info:*' check-for-staged-changes true
 # zstyle ':vcs_info:git*' formats " (%b %a%m%c) "
@@ -84,3 +82,4 @@ zstyle ':vcs_info:git*' formats " [%b]"
 #         hook_com[staged]+='+'
 #     fi
 # }
+# PROMPT='ln(%1~) '

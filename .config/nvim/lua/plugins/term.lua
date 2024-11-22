@@ -1,21 +1,20 @@
 return {
-  -- amongst your other plugins
-  { "akinsho/toggleterm.nvim", version = "*", config = true },
-  -- or
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    opts = {--[[ things you want to change go here]]
+    opts = {
       float_opts = {
         border = "curved",
         colors = "white",
       },
+      direction = "horizontal",
+      size = 20,
     },
     keys = {
       {
         "<C-/>",
         function()
-          vim.cmd("ToggleTerm direction=float")
+          vim.cmd("ToggleTerm direction=horizontal")
         end,
       },
     },
