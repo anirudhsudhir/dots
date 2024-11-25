@@ -17,11 +17,11 @@ function Get_appearance()
 end
 
 function Scheme_for_appearance(appearance)
-	if appearance:find("Light") then
-		return "flexoki-light"
-	else
-		return "flexoki-dark"
-	end
+	-- if appearance:find("Light") then
+	-- return "flexoki-light"
+	-- else
+	return "flexoki-dark"
+	-- end
 
 	-- return "Builtin Dark"
 end
