@@ -1,0 +1,37 @@
+[window]
+padding.x = 2
+padding.y = 2
+dynamic_padding = true
+
+decorations = "buttonless"
+
+opacity = 0.95
+blur = true
+
+[env]
+term = "xterm-256color"
+
+[font]
+normal.family = "BerkeleyMono Nerd Font Mono"
+italic.family = "BerkeleyMono Nerd Font Mono"
+bold.family = "BerkeleyMono Nerd Font Mono"
+bold_italic.family = "BerkeleyMono Nerd Font Mono"
+
+size = 15.0
+
+[cursor]
+style.blinking = "Always"
+
+# [debug]
+# render_timer = true
+
+# [keyboard]
+# bindings = [
+# { key = "Space", mods = "Option|Control", action = "ToggleViMode" },
+# { key = "Enter", mods = "Option", action = "ToggleSimpleFullscreen" },
+# ]
+
+[general]
+
+live_config_reload = true
+import = ["~/.config/alacritty/themes/alacritty-theme/themes/rose_pine.toml"]

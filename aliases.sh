@@ -2,13 +2,16 @@
 alias gs='git status'
 alias ga='git add'
 alias gl='git log'
-alias gr='git reset'
+alias gd='git diff'
+alias gc='git commit'
 alias gca='git commit --amend'
 alias gcan='git commit --amend --no-edit'
 alias gch='git checkout'
+alias gpo='git push origin'
 alias gpom='git push origin main'
 
 # ls aliases
+alias ls='ls --color'
 alias la='ls -la'
 alias lh='ls -lah'
 
@@ -27,6 +30,11 @@ cbd() {
 cbr() {
   cargo build --release
   cp "./target/release/$1" .
+}
+
+mkcd() {
+  mkdir -p "$1"
+  cd "$1" || return
 }
 
 # Usage: rgfzf [<rg SYNOPSIS>]

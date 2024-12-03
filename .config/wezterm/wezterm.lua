@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 
-config.font = wezterm.font("Ligalex Mono")
+config.font = wezterm.font("BerkeleyMono Nerd Font Mono")
 config.font_size = 16.0
 
 ---- Toggle theme depending on system settings

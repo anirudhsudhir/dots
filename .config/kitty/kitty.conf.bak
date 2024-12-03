@@ -17,7 +17,7 @@ map ctrl+shift+g show_last_command_output
 map f2 launch --stdin-source=@last_cmd_output --stdin-add-formatting --type=overlay less +G -R
 
 # BEGIN_KITTY_THEME
-# Dark Pastel
+# Flexoki (Dark)
 include current-theme.conf
 # END_KITTY_THEME
 

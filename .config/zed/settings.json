@@ -21,7 +21,7 @@
     "diagnostics": false,
     "metrics": false
   },
-  "theme": "Solarized Dark",
+  "theme": "Flexoki Light",
   "ui_font_size": 15,
   "vim_mode": true,
   "notification_panel": {
