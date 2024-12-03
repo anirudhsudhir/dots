@@ -13,11 +13,11 @@ end)
 
 -- Open terminal with opt+return
 hs.hotkey.bind({ "alt" }, "return", function()
-	local app = hs.application.find("wezterm")
+	local app = hs.application.find("alacritty")
 
 	if app == nil then
-		hs.alert.show("Launching wezterm")
-		hs.application.launchOrFocus("wezterm")
+		hs.alert.show("Launching alacritty")
+		hs.application.launchOrFocus("alacritty")
 	elseif app:isFrontmost() then
 		app:hide()
 	else

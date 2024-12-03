@@ -40,3 +40,5 @@ export NVM_DIR="$HOME/.nvm"
 source ~/aliases.sh
 set -o vi
 eval "$(starship init bash)"
+
+. "$HOME/.cargo/env"

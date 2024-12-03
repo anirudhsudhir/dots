@@ -1,20 +1,3 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    fzf-tab
-    )
-
-source $ZSH/oh-my-zsh.sh
-
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3p62/bin:$PATH"
@@ -29,6 +12,8 @@ source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
 source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.3
 
+. "$HOME/.cargo/env"
+
 # bun completions
 [ -s "/Users/anirudh/.bun/_bun" ] && source "/Users/anirudh/.bun/_bun"
 
@@ -38,14 +23,16 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/Users/anirudh/.ghcup/env" ] && . "/Users/anirudh/.ghcup/env" # ghcup-env
 
+autoload -U compinit; compinit
+source ~/.fzf-tab/fzf-tab.plugin.zsh
+
+
 EDITOR=nvim
 VISUAL=nvim
 GIT_EDITOR=nvim
 
-[[ $TERM == "xterm-kitty" ]] && alias ssh="TERM=xterm-256color ssh"
-[[ $TERM == "xterm-kitty" ]] && alias orb="TERM=xterm-256color orb"
-
 unsetopt BEEP
+setopt autocd
 
 source <(fzf --zsh)
 
@@ -55,10 +42,6 @@ set -o vi
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
-
-
-fortune
-eval "$(starship init zsh)"
 
 # autoload -Uz vcs_info
 # precmd_vcs_info() { vcs_info }
@@ -83,3 +66,10 @@ eval "$(starship init zsh)"
 #     fi
 # }
 # PROMPT='ln(%1~) '
+
+
+fortune
+eval "$(starship init zsh)"
+
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
