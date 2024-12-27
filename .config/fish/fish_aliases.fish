@@ -23,27 +23,31 @@ alias orb_env='TERM=xterm-256color orb'
 alias cv='NVIM_APPNAME="custom-nvim" nvim'
 
 # Build and copy rust debug builds to root
-cbd() {
-  cargo build
-  cp "./target/debug/$1" .
-}
+function cbd
+    cargo build
+    cp "./target/debug/$argv[1]" .
+end
 
 # Build and copy rust release builds to root
-cbr() {
-  cargo build --release
-  cp "./target/release/$1" .
-}
+function cbr
+    cargo build --release
+    cp "./target/release/$argv[1]" .
+end
 
-mkcd() {
-  mkdir -p "$1"
-  cd "$1" || return
-}
+function mkcd
+    mkdir -p "$argv[1]"
+    cd "$argv[1]" || return
+end
 
-# Usage: rgfzf [<rg SYNOPSIS>]
-function rgfzf {
-  command rg --color=always --line-number --no-heading --smart-case "${*:-}" |
-    command fzf -d':' --ansi \
-      --preview "command bat -p --color=always {1} --highlight-line {2}" \
-      --preview-window ~8,+{2}-5 |
-    awk -F':' '{print $1}'
-}
+function rgfzf
+    set -x RG_PREFIX rga --files-with-matches
+    set -l file
+    set file (
+        FZF_DEFAULT_COMMAND="$RG_PREFIX '$argv'" \
+            fzf --sort --preview="[ ! -z {} ] && rga --pretty --context 5 {q} {}" \
+                --phony -q "$argv" \
+                --bind "change:reload:$RG_PREFIX {q}" \
+                --preview-window="70%:wrap"
+    ) &&
+        open "$file"
+end

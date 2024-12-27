@@ -27,23 +27,23 @@ $character
 """
 
 [directory]
-style = '#FF7979'
+style = '#d79921'
 
 [character]
-success_symbol = '[𝞴](#FF7979)'
+success_symbol = '[𝞴](#d79921)'
 
 [git_branch]
-style = '#FF7979'
+style = '#d79921'
 format = '[\[$symbol$branch(:$remote_branch)\]]($style)'
 [git_commit]
-style = '#FF7979'
+style = '#d79921'
 [git_state]
-style = '#FF7979'
+style = '#d79921'
 [git_status]
-style = '#FF7979'
+style = '#d79921'
 
 [cmd_duration]
-style = '#FF7979'
+style = '#d79921'
 
 [[battery.display]]
 threshold = 10
@@ -51,4 +51,4 @@ style = 'bold red'
 
 [python]
 format = '[${pyenv_prefix}(\($virtualenv\) )]($style)'
-style = '#FF7979'
+style = '#d79921'

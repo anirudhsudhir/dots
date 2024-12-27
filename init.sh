@@ -2,38 +2,48 @@
 
 # Init Script (WIP)
 
-echo "185.199.108.133 raw.githubusercontent.com" >>/etc/hosts
-
 # Linux
 # install i3 polybar brightnessctl nmtui(networkmanager) feh
 # alsamixer - "m" to unmute
 
 # Mac
-# install Homebrew
+Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew update && brew upgrade
 
-# clone and symlink dotfiles
+/opt/homebrew/bin/brew update
+/opt/homebrew/bin/brew upgrade
+
+# Clone and symlink dotfiles
+git clone https://github.com/anirudhsudhir/dots.git
 brew install stow
-git clone https://github.com/anirudhsudhir/dots ~/dots
-cd ~/dots && stow -v .
+cd ~/dots && /opt/homebrew/bin/stow -v .
 
-# zsh plugins
-brew install zsh-autosuggestions
-echo "source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >>~/.zshrc
+# Use fish shell
+/opt/homebrew/bin/brew install fish
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+chsh -s /opt/homebrew/bin/fish
 
-brew install zsh-syntax-highlighting
-echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>~/.zshrc
+exec fish
 
-git clone https://github.com/Aloxaf/fzf-tab ~/.fzf-tab
-echo "source ~/.fzf-tab/fzf-tab.plugin.zsh" >>~/.zshrc
+brew install --cask ghostty
+brew install --cask nikitabobko/tap/aerospace
+brew install --cask raycast
 
-zsh
+brew install fzf
+brew install ripgrep
+brew install fd
 
 # tmux plugin manager
 brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-brew install --cask nikitabobko/tap/aerospace
-brew install --cask alacritty
-brew install --cask hammerspoon
+# Additional
+brew install orbstack
+brew install --cask visual-studio-code
+brew install --cask obsidian
+brew install --cask bruno
+brew install --cask keycastr
+
+brew install --cask zed
+
+# IMPORTANT: SETUP SSH KEYS

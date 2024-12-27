@@ -14,18 +14,8 @@ chruby ruby-3.1.3
 
 . "$HOME/.cargo/env"
 
-# bun completions
-[ -s "/Users/anirudh/.bun/_bun" ] && source "/Users/anirudh/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-[ -f "/Users/anirudh/.ghcup/env" ] && . "/Users/anirudh/.ghcup/env" # ghcup-env
-
 autoload -U compinit; compinit
 source ~/.fzf-tab/fzf-tab.plugin.zsh
-
 
 EDITOR=nvim
 VISUAL=nvim
@@ -43,32 +33,7 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-# autoload -Uz vcs_info
-# precmd_vcs_info() { vcs_info }
-# precmd_functions+=( precmd_vcs_info )
-# setopt prompt_subst
-# PROMPT='%c ƛ '
-# RPROMPT='${vcs_info_msg_0_}'
-# zstyle ':vcs_info:git:*' formats '%b'
-# zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:*' check-for-staged-changes true
-# zstyle ':vcs_info:git*' formats " (%b %a%m%c) "
-# zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-#
-# +vi-git-untracked(){
-#     if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
-#         git status --porcelain | grep '??' &> /dev/null ; then
-#         # This will show the marker if there are any untracked files in repo.
-#         # If instead you want to show the marker only if there are untracked
-#         # files in $PWD, use:
-#         #[[ -n $(git ls-files --others --exclude-standard) ]] ; then
-#         hook_com[staged]+='+'
-#     fi
-# }
-# PROMPT='ln(%1~) '
-
-
-fortune
+# fortune
 eval "$(starship init zsh)"
 
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
