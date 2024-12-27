@@ -17,6 +17,7 @@ alias lh='ls -lah'
 
 alias v='nvim'
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+alias ssh='TERM=xterm-256color ssh'
 
 alias cv='NVIM_APPNAME="custom-nvim" nvim'
 
