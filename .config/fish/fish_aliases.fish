@@ -16,7 +16,6 @@ alias la='ls -la'
 alias lh='ls -lah'
 
 alias v='nvim'
-alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias ssh_env='TERM=xterm-256color ssh'
 alias orb_env='TERM=xterm-256color orb'
 

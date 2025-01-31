@@ -8,8 +8,5 @@ window-padding-y=10
 # window-width = 1000
 # window-height = 1000
 
-keybind = ctrl+w>shift+'=new_split:right
-keybind = ctrl+w>'=new_split:down
-keybind = ctrl+w>n=new_tab
 keybind = global:ctrl+q=toggle_quick_terminal
 # theme = gruvbox-material
