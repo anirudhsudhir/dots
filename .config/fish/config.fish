@@ -25,5 +25,7 @@ set -g __fish_git_prompt_char_untrackedfiles "✖"
 set -g __fish_git_prompt_char_conflictedstate "⚠︎"
 set -g __fish_git_prompt_char_cleanstate "✔"
 
-starship init fish | source
+# starship init fish | source
+
+set -gx PYENV_ROOT "$HOME/.pyenv"
 eval "$(pyenv init -)"
