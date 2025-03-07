@@ -10,16 +10,14 @@ return {
       vim.api.nvim_set_option_value("background", "dark", {})
     end,
   },
-  { "sainnhe/everforest" },
-  { "rebelot/kanagawa.nvim" },
   { "ellisonleao/gruvbox.nvim" },
   { "water-sucks/darkrose.nvim" },
-  { "rose-pine/neovim", name = "rose-pine" },
-  { "kepano/flexoki-neovim", name = "flexoki" },
+  { "rose-pine/neovim",         name = "rose-pine" },
+  { "kepano/flexoki-neovim",    name = "flexoki" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "flexoki-dark",
     },
   },
   -- {

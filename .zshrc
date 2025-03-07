@@ -8,14 +8,14 @@ export PATH=$PATH:/usr/local/go/bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.1.3
+# source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+# source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+# chruby ruby-3.1.3
 
 . "$HOME/.cargo/env"
 
 autoload -U compinit; compinit
-source ~/.fzf-tab/fzf-tab.plugin.zsh
+# source ~/.fzf-tab/fzf-tab.plugin.zsh
 
 EDITOR=nvim
 VISUAL=nvim
@@ -24,7 +24,7 @@ GIT_EDITOR=nvim
 unsetopt BEEP
 setopt autocd
 
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 source ~/aliases.sh
 set -o vi
@@ -33,8 +33,7 @@ autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-# fortune
-eval "$(starship init zsh)"
+# source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+. "$HOME/.local/bin/env"
