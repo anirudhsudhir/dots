@@ -1,12 +1,18 @@
-font-family = "BerkeleyMono Nerd Font Mono"
-font-size = 13
-font-thicken = true
+# font-family = "BerkeleyMono Nerd Font Mono"
+font-family = "JuliaMono"
+font-style = bold
+font-size = 14
 background-opacity = 1
-macos-titlebar-style=hidden
+# macos-titlebar-style=hidden
 window-padding-x=10
 window-padding-y=10
-# window-width = 1000
-# window-height = 1000
+
+theme = tokyonight_night
 
 keybind = global:ctrl+q=toggle_quick_terminal
-# theme = gruvbox-material
+keybind = ctrl+"=new_split:right
+keybind = ctrl+%=new_split:down
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right

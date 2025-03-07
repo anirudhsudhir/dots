@@ -1,40 +1,24 @@
 {
   "autosave": "on_focus_change",
   "buffer_font_family": "BerkeleyMono Nerd Font Mono",
-  "buffer_font_size": 15,
+  "buffer_font_size": 14,
   "experimental.theme_overrides": {
     "syntax": {
-      "comment": {
-        "font_style": "italic"
-      },
-      "keyword": {
-        "font_style": "italic"
-      }
+      "comment": { "font_style": "italic" },
+      "keyword": { "font_style": "italic" }
     }
   },
   "features": {
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "zed"
   },
   "format_on_save": "on",
   "show_whitespaces": "all",
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
-  },
-  "theme": "Gruvbox Dark",
+  "telemetry": { "diagnostics": false, "metrics": false },
+  "theme": "Tokyo Night",
   "ui_font_size": 15,
   "vim_mode": true,
   "relative_line_numbers": true,
-  "notification_panel": {
-    "button": false
-  },
-  "chat_panel": {
-    "button": false
-  },
-  "terminal": {
-    "button": false
-  },
-  "tab_bar": {
-    "show": true
-  }
+  "notification_panel": { "button": false },
+  "terminal": { "button": false },
+  "tab_bar": { "show": true }
 }

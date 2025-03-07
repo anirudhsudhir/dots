@@ -1,7 +1,7 @@
 [user]
 	name = Anirudh Sudhir
-	email = anirudh.sudhir1@gmail.com
-	signingkey = ~/.ssh/id_rsa.pub
+  email = 137381184+anirudhsudhir@users.noreply.github.com
+	signingkey = ~/.ssh/id_rsa
 [init]
 	defaultBranch = main
 [color]
@@ -20,3 +20,5 @@
 	format = ssh
 [commit]
   gpgSign = true
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"

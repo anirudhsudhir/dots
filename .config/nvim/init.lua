@@ -1,3 +1,4 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
--- vim.o.background = "light"
+
+vim.diagnostic.config({ virtual_lines = true })

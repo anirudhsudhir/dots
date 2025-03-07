@@ -5,13 +5,13 @@ Dotfiles managed using stow
 - Viewing the symlinks that will be created
 
 ```sh
-stow -n -v --no-folding .
+stow -n -v .
 ```
 
 - Creating the symlinks
 
 ```sh
-stow -v --no-folding .
+stow -v .
 ```
 
 - Deleting the symlinks
