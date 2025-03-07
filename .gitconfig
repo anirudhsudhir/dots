@@ -1,7 +1,7 @@
 [user]
 	name = Anirudh Sudhir
 	email = anirudh.sudhir1@gmail.com
-	signingkey = ~/.ssh/id_rsa.pub
+	signingkey = ~/.ssh/id_rsa
 [init]
 	defaultBranch = main
 [color]
