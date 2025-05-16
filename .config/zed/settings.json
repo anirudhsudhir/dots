@@ -1,6 +1,6 @@
 {
   "autosave": "on_focus_change",
-  "buffer_font_family": "BerkeleyMono Nerd Font Mono",
+  "buffer_font_family": "JuliaMono",
   "buffer_font_size": 14,
   "experimental.theme_overrides": {
     "syntax": {
@@ -9,7 +9,7 @@
     }
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "none"
   },
   "format_on_save": "on",
   "show_whitespaces": "all",

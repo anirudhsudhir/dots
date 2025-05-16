@@ -1,4 +1,3 @@
-# font-family = "BerkeleyMono Nerd Font Mono"
 font-family = "JuliaMono"
 font-style = bold
 font-size = 14
@@ -8,6 +7,7 @@ window-padding-x=10
 window-padding-y=10
 
 theme = tokyonight_night
+macos-icon = xray
 
 keybind = global:ctrl+q=toggle_quick_terminal
 keybind = ctrl+"=new_split:right
