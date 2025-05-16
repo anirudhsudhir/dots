@@ -1,12 +1,18 @@
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
-    enabled = true,
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    lazy = false,
     opts = {
       popup_border_style = "rounded",
       window = {
         position = "float",
       },
-    },
-  },
+    }
+  }
 }

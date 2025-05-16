@@ -1,4 +1,5 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+-- Custom Neovim configuration from scratch :D
 
-vim.diagnostic.config({ virtual_lines = true })
+require("config.init")
+require("config.keymaps")
+require("config.autocmds")

@@ -20,7 +20,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias ssh_env='TERM=xterm-256color ssh'
 alias orb_env='TERM=xterm-256color orb'
 
-alias cv='NVIM_APPNAME="custom-nvim" nvim'
+alias lv='NVIM_APPNAME=lazyvim nvim'
 
 # Build and copy rust debug builds to root
 cbd() {
