@@ -36,23 +36,6 @@ require("which-key").add({
   },
 
   {
-    "<leader>cf",
-    function()
-      local pos = vim.api.nvim_win_get_cursor(0)
-      vim.cmd([[norm! gg=G]])
-      vim.api.nvim_win_set_cursor(0, pos)
-    end,
-    desc = "Format",
-  },
-  {
-    "<leader>r",
-    function()
-      vim.cmd([[luafile %]])
-    end,
-    desc = "Reload current Lua config",
-  },
-
-  {
     "<leader><leader>",
     function()
       require("fzf-lua").files()
@@ -91,9 +74,17 @@ require("which-key").add({
   },
 
   {
+  {
     "<leader>c",
     group = "Code",
-
+  },
+    {
+      "cf",
+      function()
+        vim.lsp.buf.format()
+      end,
+      desc = "Format code",
+    },
   },
 
   {

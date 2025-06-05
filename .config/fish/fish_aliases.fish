@@ -19,8 +19,6 @@ alias v='nvim'
 alias ssh_env='TERM=xterm-256color ssh'
 alias orb_env='TERM=xterm-256color orb'
 
-alias lv='NVIM_APPNAME=lazyvim nvim'
-
 # Build and copy rust debug builds to root
 function cbd
     cargo build

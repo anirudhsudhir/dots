@@ -1,0 +1,57 @@
+{
+  "workbench.startupEditor": "none",
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "JuliaMono",
+  "terminal.integrated.fontFamily": "JuliaMono",
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "debug.console.fontSize": 14,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.empty.hint": "hidden",
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  },
+  "window.titleBarStyle": "custom",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.external.osxExec": "Ghostty.app",
+  "terminal.integrated.fontWeight": "normal",
+  "breadcrumbs.enabled": false,
+  "notebook.lineNumbers": "on",
+  "editor.accessibilitySupport": "off",
+  "go.toolsManagement.autoUpdate": true,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "files.autoSaveDelay": 10,
+  "files.autoSave": "afterDelay",
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Flexoki Light",
+  "editor.formatOnSave": true,
+  "makefile.configureOnOpen": false,
+  "editor.formatOnType": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+}

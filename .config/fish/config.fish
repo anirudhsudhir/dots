@@ -1,4 +1,4 @@
-set -gx PATH $HOME/.rvm/bin /opt/homebrew/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin ~/go/bin /Library/PostgreSQL/17/bin/ /usr/local/bin $PATH
+fish_add_path $HOME/.rvm/bin  /usr/local/bin /opt/homebrew/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin $HOME/go/bin /Library/PostgreSQL/17/bin/ /opt/homebrew/opt/llvm/bin/
 set -gx NVM_DIR "$HOME/.nvm" $NVM_DIR
 
 source "$HOME/.cargo/env.fish"
@@ -33,3 +33,17 @@ zoxide init fish | source
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 pyenv init - fish | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
+    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/opt/homebrew/Caskroom/miniforge/base/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

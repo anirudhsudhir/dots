@@ -1,13 +1,9 @@
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      -- load the colorscheme here
-      vim.cmd([[colorscheme tokyonight-night]])
-    end,
-  },
+  { "water-sucks/darkrose.nvim" },
+
+  { "kepano/flexoki-neovim"},
+
+  { "ellisonleao/gruvbox.nvim" },
 
   {
     "sainnhe/gruvbox-material",
@@ -18,10 +14,17 @@ return {
       vim.api.nvim_set_option_value("background", "dark", {})
     end,
   },
-  { "ellisonleao/gruvbox.nvim" },
-  { "water-sucks/darkrose.nvim" },
+
+  { "rebelot/kanagawa.nvim"},
+
   { "rose-pine/neovim", name = "rose-pine" },
-  { "kepano/flexoki-neovim", name = "flexoki" },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+  },
+
   -- {
   --   -- Theme toggle
   --   "f-person/auto-dark-mode.nvim",
@@ -37,4 +40,17 @@ return {
   --     end,
   --   },
   -- },
+  --
+  
+{
+    "zaldih/themery.nvim",
+    lazy = false,
+    config = function()
+      require("themery").setup({
+        themes = {"darkrose", "flexoki-light", "flexoki-dark", "gruvbox", "gruvbox-material", "kanagawa-dragon", "kanagawa-lotus", "kanagawa-wave",
+          "rose-pine", "tokyonight-day", "tokyonight-moon", "tokyonight-night", "tokyonight-storm"},
+        livePreview = true,
+      })
+    end
+  }
 }
