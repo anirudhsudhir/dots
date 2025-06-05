@@ -51,7 +51,6 @@ require("which-key").add({
     end,
     desc = "Reload current Lua config",
   },
-
   {
     "<leader><leader>",
     function()

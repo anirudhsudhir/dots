@@ -10,6 +10,7 @@ return {
         "gopls",
         "gofumpt",
         "goimports",
+        "pyright",
         "ruff",
         "rust-analyzer",
         "shellcheck",
