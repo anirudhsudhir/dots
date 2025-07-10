@@ -1,6 +1,9 @@
 {
   "workbench.startupEditor": "none",
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Flexoki Dark",
+  "workbench.preferredLightColorTheme": "One Hunter Flexoki Light",
   "editor.fontFamily": "JuliaMono",
   "terminal.integrated.fontFamily": "JuliaMono",
   "editor.fontSize": 14,
@@ -49,7 +52,6 @@
   "files.autoSaveDelay": 10,
   "files.autoSave": "afterDelay",
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Flexoki Light",
   "editor.formatOnSave": true,
   "makefile.configureOnOpen": false,
   "editor.formatOnType": true,

@@ -23,6 +23,7 @@ return {
         "tinymist",
         "taplo", --TOML
         "yamlls",
+        "zig",
       },
       automatic_installation = true,
     },
@@ -43,4 +44,3 @@ return {
     },
   },
 }
-

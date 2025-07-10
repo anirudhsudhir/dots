@@ -33,6 +33,7 @@ require("which-key").add({
     {"bd", "<cmd>bdelete<cr>", desc = "Close the current buffer"},
     {"bp", "<cmd>bprevious<cr>", desc = "Go to the previous buffer"},
     {"bn", "<cmd>bnext<cr>", desc = "Go to the next buffer"},
+    {"bo", "<cmd>%bdelete | edit # | normal <cr>", desc = "Close all buffers except active one"},
   },
 
   {

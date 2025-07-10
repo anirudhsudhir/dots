@@ -25,6 +25,20 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
   },
 
+  {
+    "maxmx03/solarized.nvim",
+    lazy = false,
+    priority = 1000,
+    ---@type solarized.config
+    opts = {},
+    config = function(_, opts)
+      vim.o.termguicolors = true
+      vim.o.background = 'light'
+      require('solarized').setup(opts)
+      vim.cmd.colorscheme 'solarized'
+    end,
+  },
+
   -- {
   --   -- Theme toggle
   --   "f-person/auto-dark-mode.nvim",
@@ -48,7 +62,7 @@ return {
     config = function()
       require("themery").setup({
         themes = {"darkrose", "flexoki-light", "flexoki-dark", "gruvbox", "gruvbox-material", "kanagawa-dragon", "kanagawa-lotus", "kanagawa-wave",
-          "rose-pine", "tokyonight-day", "tokyonight-moon", "tokyonight-night", "tokyonight-storm"},
+          "rose-pine", "solarized", "tokyonight-day", "tokyonight-moon", "tokyonight-night", "tokyonight-storm"},
         livePreview = true,
       })
     end
