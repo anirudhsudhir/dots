@@ -2,28 +2,23 @@ return {
   {
     "mason-org/mason-lspconfig.nvim",
     opts = {
+      -- LSP servers for nvim-lspconfig
       ensure_installed = {
-        -- Languages: Bash, C/C++, Go, Python, Rust, TOML, Typst, YAML
-        "bash-language-server",
+        "bashls",
         "clangd",
-        "clang-format",
-        "cmake",
+        "cmakels",
         "cssls",
         "gopls",
-        "gofumpt",
-        "goimports",
         "html",
+        "lua_ls",
         "pyright",
-        "ruff",
-        "rust",
-        "shellcheck",
-        "shfmt",
-        "stylua",
+        "ruff_lsp",
+        "rust_analyzer",
         "sqls",
         "tinymist",
-        "taplo", --TOML
+        "taplo",
         "yamlls",
-        "zig",
+        "zls",
       },
       automatic_installation = true,
     },
@@ -31,6 +26,15 @@ return {
       {
         "mason-org/mason.nvim",
         opts = {
+          -- Other Mason tools
+          ensure_installed = {
+            "clang-format",
+            "goimports",
+            "shellcheck",
+            "shfmt",
+            "stylua",
+            "ruff",
+          },
           ui = {
             icons = {
               package_installed = "✓",
