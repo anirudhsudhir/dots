@@ -175,3 +175,7 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 cmd-ctrl-1 = 'volume down'
+
+# [mode.main.binding]
+# cmd-h = []     # Disable "hide application"
+# cmd-alt-h = [] # Disable "hide others"

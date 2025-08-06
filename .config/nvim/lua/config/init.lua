@@ -39,3 +39,6 @@ vim.lsp.config("lua_ls", {
     }
   }
 })
+
+vim.keymap.set('v', '<', '<gv', { noremap = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true })

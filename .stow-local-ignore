@@ -8,3 +8,5 @@ init.sh
 .config/polybar
 .config/sway
 .config/waybar
+
+nix/*
