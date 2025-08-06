@@ -1,4 +1,4 @@
-fish_add_path $HOME/.rvm/bin  /usr/local/bin /opt/homebrew/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin $HOME/go/bin /Library/PostgreSQL/17/bin/ /opt/homebrew/opt/llvm/bin/
+fish_add_path $HOME/.rvm/bin  /usr/local/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin $HOME/go/bin /Library/PostgreSQL/17/bin/ /run/current-system/sw/bin/
 set -gx NVM_DIR "$HOME/.nvm" $NVM_DIR
 
 source "$HOME/.cargo/env.fish"

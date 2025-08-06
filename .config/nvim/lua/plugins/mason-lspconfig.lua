@@ -11,6 +11,7 @@ return {
         "gopls",
         "html",
         "lua_ls",
+        "nil_ls",
         "pyright",
         "ruff_lsp",
         "rust_analyzer",
@@ -28,6 +29,7 @@ return {
         opts = {
           -- Other Mason tools
           ensure_installed = {
+            "alejandra",
             "clang-format",
             "goimports",
             "shellcheck",

@@ -41,12 +41,14 @@ nnoremap gE :action GotoPreviousError<CR>
 nnoremap <leader>s :action GotoRelated<CR>
 nnoremap <leader>h :action CallHierarchy<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
-nnoremap <c-s> :action FileStructurePopup<CR>
-nnoremap gc :action GotoClass<CR>
-nnoremap gi :action GotoImplementation<CR>
-nnoremap gd :action GotToDeclaration<CR>
-nnoremap gp :action GotToSuperMethod<CR>
-nnoremap gt :action GotoTest<CR>
+
+nnoremap grn :action RenameElement<CR>
+nnoremap gra :action ShowIntentionActions<CR>
+nnoremap grr :action FindUsages<CR>
+nnoremap gri :action GotoImplementation<CR>
+nnoremap grt :action GotoTypeDeclaration<CR>
+nnoremap gO :action FileStructurePopup<CR>
+
 nnoremap gb :action Back<CR>
 nnoremap gf :action Forward<CR>
 
