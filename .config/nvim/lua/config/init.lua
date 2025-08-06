@@ -9,10 +9,13 @@ vim.opt.relativenumber = true
 
 vim.api.nvim_set_hl(0, "StatuslineGit", { fg = "#191724", bg = "#eb6f92" })
 vim.opt.statusline =
-" [%{mode()}]%h %f %m%r %#StatuslineGit#%{get(b:,'gitsigns_status','')}%* %= %y %{&fileencoding} %l:%c ♥  "
+" [%{mode()}]%h %f %m%r %#StatuslineGit#%{get(b:,'gitsigns_status','')}%* %= %y %{&fileencoding} %l:%c "
 vim.opt.list = true
--- vim.opt.listchars="eol:↲,lead:·,trail:~,tab:>>"
-vim.opt.listchars = "eol:↲,trail:~,tab:>>"
+vim.opt.listchars = {
+  tab = "  ",
+  trail = "~"
+  -- eol = "↲"
+}
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -22,7 +25,7 @@ vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
-vim.opt.incsearch = true -- incremental search
+vim.opt.incsearch = true
 
 -- vim.opt.background = "dark"
 vim.cmd.colorscheme("gruvbox-material")
@@ -39,3 +42,6 @@ vim.lsp.config("lua_ls", {
     }
   }
 })
+
+vim.keymap.set('v', '<', '<gv', { noremap = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true })
