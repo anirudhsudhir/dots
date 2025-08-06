@@ -1,12 +1,13 @@
-font-family = JuliaMono Nerd Font Mono
-font-style = bold
-font-size = 15
+font-family = JuliaMono
+# font-style = bold
+font-size = 14
 background-opacity = 1
 # macos-titlebar-style=hidden
 window-padding-x=10
 window-padding-y=10
 
-theme = light:Builtin Solarized Light, dark: 3024 Night
+# theme = light:Builtin Solarized Light, dark: tokyonight_night
+theme = Tokyonight Night
 macos-icon = xray
 
 keybind = global:ctrl+q=toggle_quick_terminal

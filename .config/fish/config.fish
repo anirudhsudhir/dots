@@ -1,5 +1,4 @@
-fish_add_path $HOME/.rvm/bin  /usr/local/bin /opt/homebrew/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin $HOME/go/bin /Library/PostgreSQL/17/bin/ /opt/homebrew/opt/llvm/bin/
-set -gx NVM_DIR "$HOME/.nvm" $NVM_DIR
+fish_add_path $HOME/.rvm/bin  /usr/local/bin /usr/local/opt/ruby/bin /usr/local/lib/ruby/gems/2.6.3p62/bin $HOME/go/bin /Library/PostgreSQL/17/bin/ /run/current-system/sw/bin/
 
 source "$HOME/.cargo/env.fish"
 
@@ -25,14 +24,14 @@ set -g __fish_git_prompt_char_untrackedfiles "✖"
 set -g __fish_git_prompt_char_conflictedstate "⚠︎"
 set -g __fish_git_prompt_char_cleanstate "✔"
 
+set -gx FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
+
 starship init fish | source
 zoxide init fish | source
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
-
-pyenv init - fish | source
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -47,3 +46,4 @@ else
 end
 # <<< conda initialize <<<
 
+mise activate fish | source

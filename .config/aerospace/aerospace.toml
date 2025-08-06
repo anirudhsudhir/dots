@@ -81,11 +81,11 @@ outer.right = 10
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # You can uncomment the following lines to open up terminal with alt + enter shortcut (like in i3)
-ctrl-enter = 'exec-and-forget open -n /Applications/Ghostty.app/'
+ctrl-enter = 'exec-and-forget open /Applications/Ghostty.app/'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
-# alt-comma = 'layout accordion horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
@@ -175,3 +175,7 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 cmd-ctrl-1 = 'volume down'
+
+# [mode.main.binding]
+# cmd-h = []     # Disable "hide application"
+# cmd-alt-h = [] # Disable "hide others"

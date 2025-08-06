@@ -4,9 +4,14 @@ return {
     -- optional: provides snippets for the snippet source
 
     -- use a release tag to download pre-built binaries
-    version = '1.*',   dependencies = { 'rafamadriz/friendly-snippets' },
+    version = '1.*',
+    dependencies = { 'rafamadriz/friendly-snippets' },
     opts = {
-      keymap = { preset = 'default' },
+      keymap = {
+        preset = "default",
+        ['<CR>'] = { 'select_and_accept', 'fallback' },
+      },
+
 
       appearance = {
         -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -32,7 +37,7 @@ return {
 
       cmdline = {
         keymap = { preset = 'inherit' },
-        completion = { menu = { auto_show = true } },
+        -- completion = { menu = { auto_show = true } },
       },
     },
     opts_extend = { "sources.default" }
