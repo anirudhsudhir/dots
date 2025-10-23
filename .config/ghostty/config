@@ -1,6 +1,12 @@
-font-family = JuliaMono
+font-family = JuliaMono Nerd Font
+# font-style-italic = JuliaMono Nerd Font Medium Italic
+# font-style-bold = JuliaMono Nerd Font Bold
+# font-style-bold-italic = JuliaMono Nerd Font Bold Italic
 # font-style = bold
+# font-thicken = true
 font-size = 14
+# font-style = medium
+
 background-opacity = 1
 # macos-titlebar-style=hidden
 window-padding-x=10
