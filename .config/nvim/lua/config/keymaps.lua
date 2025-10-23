@@ -12,17 +12,17 @@ require("which-key").add({
       "<leader>s",
       group = "Window",
     },
-    {"<leader>sv", "<cmd>vsp<cr>", desc = "Split window vertically" },
-    {"<leader>sh", "<cmd>sp<cr>", desc = "Split window horizontally" },
-    {"<leader>se", "<C-w>=", desc = "Make splits equal size" },
-    {"<leader>sx", "<cmd>close<cr>", desc = "Close current split" },
+    { "<leader>sv", "<cmd>vsp<cr>",   desc = "Split window vertically" },
+    { "<leader>sh", "<cmd>sp<cr>",    desc = "Split window horizontally" },
+    { "<leader>se", "<C-w>=",         desc = "Make splits equal size" },
+    { "<leader>sx", "<cmd>close<cr>", desc = "Close current split" },
   },
 
   {
-    {"<C-h>", "<C-w>h", desc = "Switch to the left window" },
-    {"<C-l>", "<C-w>l", desc = "Switch to the right window" },
-    {"<C-j>", "<C-w>j", desc = "Switch to the lower window" },
-    {"<C-k>", "<C-w>k", desc = "Switch to the upper window" },
+    { "<C-h>", "<C-w>h", desc = "Switch to the left window" },
+    { "<C-l>", "<C-w>l", desc = "Switch to the right window" },
+    { "<C-j>", "<C-w>j", desc = "Switch to the lower window" },
+    { "<C-k>", "<C-w>k", desc = "Switch to the upper window" },
   },
 
   {
@@ -30,10 +30,10 @@ require("which-key").add({
       "b",
       group = "Buffer",
     },
-    {"bd", "<cmd>bdelete<cr>", desc = "Close the current buffer"},
-    {"bp", "<cmd>bprevious<cr>", desc = "Go to the previous buffer"},
-    {"bn", "<cmd>bnext<cr>", desc = "Go to the next buffer"},
-    {"bo", "<cmd>%bdelete | edit # | normal <cr>", desc = "Close all buffers except active one"},
+    { "bd", "<cmd>bdelete<cr>",                     desc = "Close the current buffer" },
+    { "bp", "<cmd>bprevious<cr>",                   desc = "Go to the previous buffer" },
+    { "bn", "<cmd>bnext<cr>",                       desc = "Go to the next buffer" },
+    { "bo", "<cmd>%bdelete | edit # | normal <cr>", desc = "Close all buffers except active one" },
   },
 
   {
@@ -61,7 +61,7 @@ require("which-key").add({
   {
     "<leader>e",
     function()
-      require("neo-tree.command").execute({})
+      require("neo-tree.command").execute({ toggle = true })
     end,
     desc = "Neotree",
   },
@@ -75,16 +75,13 @@ require("which-key").add({
   },
 
   {
-  {
-    "<leader>c",
-    group = "Code",
-  },
     {
-      "cf",
-      function()
-        vim.lsp.buf.format()
-      end,
-      desc = "Format code",
+      "<leader>c",
+      group = "Code",
+    },
+    {
+      "cs",
+      desc = "Trouble: Document Symbols",
     },
   },
 

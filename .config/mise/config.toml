@@ -1,5 +1,13 @@
 [tools]
-go = "latest"
-java = "21"
-node = "22"
+go = ["latest"]
+java = "lts"
+node = "lts"
 python = "latest"
+mongodb = "8.1.2"
+mongosh = "latest"
+
+[env]
+# _.python.venv = "{{env.PWD}}/.venv"
+
+[settings]
+python.uv_venv_auto = true

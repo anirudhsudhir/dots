@@ -1,6 +1,6 @@
 [user]
 	name = Anirudh Sudhir
-  email = 137381184+anirudhsudhir@users.noreply.github.com
+    email = 137381184+anirudhsudhir@users.noreply.github.com
 	signingkey = ~/.ssh/id_rsa
 [init]
 	defaultBranch = main
@@ -19,6 +19,20 @@
 [gpg]
 	format = ssh
 [commit]
-  gpgSign = true
+  ; gpgSign = true
 [alias]
-	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+  change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$\\`echo $VAR\\`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+  s=status
+  a=add
+  l=log
+  d=diff
+  c=commit
+  ca=commit --amend
+  can=commit --amend --no-edit
+  ch=checkout
+  po=push origin -v
+  pom=push origin main -v
+  pu=pull -v
+  logda=log --oneline --graph --decorate --abbrev
+[diff]
+  tool = nvimdiff

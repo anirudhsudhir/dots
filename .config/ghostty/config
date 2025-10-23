@@ -1,6 +1,12 @@
-font-family = JuliaMono
+font-family = JuliaMono Nerd Font
+# font-style-italic = JuliaMono Nerd Font Medium Italic
+# font-style-bold = JuliaMono Nerd Font Bold
+# font-style-bold-italic = JuliaMono Nerd Font Bold Italic
 # font-style = bold
+# font-thicken = true
 font-size = 14
+# font-style = medium
+
 background-opacity = 1
 # macos-titlebar-style=hidden
 window-padding-x=10
@@ -9,6 +15,7 @@ window-padding-y=10
 # theme = light:Builtin Solarized Light, dark: tokyonight_night
 theme = Tokyonight Night
 macos-icon = xray
+# custom-shader = ~/.config/ghostty/shaders/retro-terminal.glsl
 
 keybind = global:ctrl+q=toggle_quick_terminal
 keybind = ctrl+"=new_split:right

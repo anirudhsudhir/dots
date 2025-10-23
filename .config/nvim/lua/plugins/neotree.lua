@@ -7,12 +7,6 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    lazy = false,
-    opts = {
-      popup_border_style = "rounded",
-      window = {
-        position = "float",
-      },
-    }
+    lazy = false
   }
 }

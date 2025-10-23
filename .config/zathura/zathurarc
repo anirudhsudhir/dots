@@ -1,7 +1,8 @@
 set adjust-open width
-set default-bg "#ffffff"
+# set default-bg "#ffffff"
+set default-bg rgba(0,0,0,0.7)
 set incremental-search true
-set page-padding 1
+set page-padding 0
 set recolor-keephue true
 set scroll-page-aware true
 set scroll-step 50
