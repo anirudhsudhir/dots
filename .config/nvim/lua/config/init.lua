@@ -17,18 +17,20 @@ vim.opt.listchars = {
   -- eol = "↲"
 }
 
+-- Next.js now has built-in support for CSS: https://nextjs.org/docs/basic-features/built-in-css-support. The built-in support solves many bugs and painpoints that the next-css plugin had.
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.incsearch = true
 
 -- vim.opt.background = "dark"
-vim.cmd.colorscheme("gruvbox-material")
+vim.cmd.colorscheme("tokyonight")
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 

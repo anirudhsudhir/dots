@@ -35,3 +35,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+-- Use an autocmd to set the highlight after the colorscheme is loaded
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    -- Set the Tree-sitter keyword group to italic
+    vim.api.nvim_set_hl(0, "@keyword", { italic = true })
+
+    -- Set the classic Vim Keyword group to italic (good for fallback)
+    vim.api.nvim_set_hl(0, "Keyword", { italic = true })
+
+    -- You can add other groups if needed, like language-specific ones:
+    -- vim.api.nvim_set_hl(0, "@keyword.sh", { italic = true })
+  end,
+})

@@ -25,25 +25,9 @@ chsh -s /opt/homebrew/bin/fish
 
 exec fish
 
-brew install --cask ghostty
-brew install --cask nikitabobko/tap/aerospace
-brew install --cask raycast
-
-brew install fzf
-brew install ripgrep
-brew install fd
+cd ~ && brew bundle install
 
 # tmux plugin manager
-brew install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-# Additional
-brew install orbstack
-brew install --cask visual-studio-code
-brew install --cask obsidian
-brew install --cask bruno
-brew install --cask keycastr
-
-brew install --cask zed
 
 # IMPORTANT: SETUP SSH KEYS
