@@ -17,7 +17,7 @@ GIT_EDITOR=nvim
 unsetopt BEEP
 setopt autocd
 
-source ~/aliases.sh
+source ~/.aliases.sh
 set -o vi
 
 autoload -z edit-command-line

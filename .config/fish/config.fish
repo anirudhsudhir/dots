@@ -28,6 +28,7 @@ set -gx FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --
 
 starship init fish | source
 zoxide init fish | source
+# fzf --fish | source
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
@@ -46,4 +47,20 @@ else
 end
 # <<< conda initialize <<<
 
-mise activate fish | source
+mise activate fish --quiet | source
+
+# function fish_prompt
+#     echo -n 'seed@pes1ug23cs046: '
+# end
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/Users/anirudh/.opam/opam-init/init.fish' && source '/Users/anirudh/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+# END opam configuration
+
+# uv
+fish_add_path "/Users/anirudh/.local/bin"

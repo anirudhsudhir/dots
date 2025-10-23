@@ -1,5 +1,11 @@
 [tools]
 go = "latest"
-java = "21"
-node = "22"
+java = "lts"
+node = "lts"
 python = "latest"
+
+[env]
+# _.python.venv = "{{env.PWD}}/.venv"
+
+[settings]
+python.uv_venv_auto = true

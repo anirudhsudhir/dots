@@ -28,7 +28,7 @@ vim.opt.wrap = false
 vim.opt.incsearch = true
 
 -- vim.opt.background = "dark"
-vim.cmd.colorscheme("gruvbox-material")
+vim.cmd.colorscheme("tokyonight")
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 

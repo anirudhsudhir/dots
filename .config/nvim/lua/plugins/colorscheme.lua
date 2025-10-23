@@ -6,12 +6,18 @@ return {
   { "ellisonleao/gruvbox.nvim" },
 
   {
-    "sainnhe/gruvbox-material",
+    'sainnhe/gruvbox-material',
+    lazy = false,
+    priority = 1000,
     config = function()
-      vim.g.gruvbox_material_background = "material"
-      -- vim.g.gruvbox_material_enable_italic = true
-      vim.g.gruvbox_material_transparent_background = 1
-      -- vim.api.nvim_set_option_value("background", "dark", {})
+      vim.o.background = 'dark'
+
+      vim.g.gruvbox_material_colors_override = {
+        bg0 = { '#1a1b26', '1' },
+      }
+
+      -- vim.g.gruvbox_material_transparent_background = 1
+      vim.cmd.colorscheme('gruvbox-material')
     end,
   },
 
@@ -21,9 +27,35 @@ return {
 
   {
     "folke/tokyonight.nvim",
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
+    lazy = false,
+    priority = 1000,
+
+    opts = {
+      style = "night",
+      comments = { italic = true },
+      keywords = { italic = true },
+      functions = { italic = true },
+      variables = { italic = true },
+      
+      on_highlights = function(hl, c)
+        hl["@keyword"] = { italic = true }
+        hl["@keyword.function"] = { italic = true }
+        hl["@keyword.operator"] = { italic = true }
+        hl["@keyword.return"] = { italic = true }
+        hl["@keyword.repeat"] = { italic = true }
+        hl["@keyword.conditional"] = { italic = true }
+        hl["@keyword.exception"] = { italic = true }
+        hl["@keyword.import"] = { italic = true }
+        hl["@keyword.coroutine"] = { italic = true }
+        hl["@keyword.modifier"] = { italic = true }
+        hl["@keyword.type"] = { italic = true }
+        hl["Keyword"] = { italic = true }
+        
+        -- Bash/shell specific
+        hl["@function.builtin.bash"] = { fg = c.cyan, italic = true }
+    end,
   },
+},
 
   {
     "Tsuzat/NeoSolarized.nvim",
@@ -68,3 +100,4 @@ return {
     end
   }
 }
+

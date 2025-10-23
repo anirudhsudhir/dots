@@ -1,3 +1,4 @@
+# Git aliases
 alias g='git'
 
 # ls aliases
@@ -6,22 +7,24 @@ alias la='ls -la'
 alias lh='ls -lah'
 
 alias v='nvim'
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias ssh_env='TERM=xterm-256color ssh'
 alias orb_env='TERM=xterm-256color orb'
 
 # Build and copy rust debug builds to root
-function cbd
-    cargo build
-    cp "./target/debug/$argv[1]" .
-end
+cbd() {
+  cargo build
+  cp "./target/debug/$1" .
+}
 
 # Build and copy rust release builds to root
-function cbr
-    cargo build --release
-    cp "./target/release/$argv[1]" .
-end
+cbr() {
+  cargo build --release
+  cp "./target/release/$1" .
+}
 
-function mkcd
-    mkdir -p "$argv[1]"
-    cd "$argv[1]" || return
-end
+mkcd() {
+  mkdir -p "$1"
+  cd "$1" || return
+}
+
