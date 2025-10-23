@@ -1,14 +1,4 @@
-# Git aliases
-alias gs='git status'
-alias ga='git add'
-alias gl='git log'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit --amend'
-alias gcan='git commit --amend --no-edit'
-alias gch='git checkout'
-alias gpo='git push origin'
-alias gpom='git push origin main'
+alias g='git'
 
 # ls aliases
 alias ls='ls --color'
@@ -34,17 +24,4 @@ end
 function mkcd
     mkdir -p "$argv[1]"
     cd "$argv[1]" || return
-end
-
-function rgfzf
-    set -x RG_PREFIX rga --files-with-matches
-    set -l file
-    set file (
-        FZF_DEFAULT_COMMAND="$RG_PREFIX '$argv'" \
-            fzf --sort --preview="[ ! -z {} ] && rga --pretty --context 5 {q} {}" \
-                --phony -q "$argv" \
-                --bind "change:reload:$RG_PREFIX {q}" \
-                --preview-window="70%:wrap"
-    ) &&
-        open "$file"
 end

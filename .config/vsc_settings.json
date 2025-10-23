@@ -23,7 +23,6 @@
 
   "notebook.lineNumbers": "on",
 
-
   "terminal.integrated.fontFamily": "JetBrainsMonoNL Nerd Font Mono",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -46,7 +45,7 @@
     "scminput": false
   },
 
-  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeCheckingMode": "standard",
   "go.toolsManagement.autoUpdate": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -54,4 +53,5 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "git.blame.statusBarItem.enabled": true
 }
