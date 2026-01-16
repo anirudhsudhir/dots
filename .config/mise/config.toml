@@ -1,9 +1,25 @@
 [tools]
+
+act = "latest"
+just = "latest"
+k3d = "latest"
+sqlc = "latest"
+
 go = ["latest"]
+golangci-lint = "latest"
+gofumpt = "latest"
+"go:github.com/securego/gosec/v2/cmd/gosec" = "latest"
+"go:golang.org/x/vuln/cmd/govulncheck" = "latest"
+
 java = "lts"
+gradle = "latest"
+
 node = "lts"
+bun = "latest"
+
 python = "latest"
-mongodb = "8.1.2"
+
+mongodb = "latest"
 mongosh = "latest"
 
 [env]

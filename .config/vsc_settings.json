@@ -31,8 +31,6 @@
 
   // "window.autoDetectColorScheme": true,
   "window.titleBarStyle": "custom",
-
-  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.editor.empty.hint": "hidden",
   "workbench.preferredDarkColorTheme": "Gruvbox Material Dark",
   "workbench.sideBar.location": "right",
@@ -42,26 +40,38 @@
     "*": false,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
   },
 
   "python.analysis.typeCheckingMode": "standard",
   "go.toolsManagement.autoUpdate": true,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "git.blame.statusBarItem.enabled": true,
   "redhat.telemetry.enabled": false,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
   "terminal.integrated.suggest.enabled": false,
-  "terminal.integrated.suggest.inlineSuggestion": "off"
+  "terminal.integrated.suggest.inlineSuggestion": "off",
+  "workbench.colorTheme": "Tokyo Night",
+  "chat.viewSessions.orientation": "stacked",
+  "cSpell.enabled": true,
+  "cSpell.language": "en-GB",
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "addWords": true,
+      "scope": "user"
+    }
+  },
 }

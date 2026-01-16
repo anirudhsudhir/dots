@@ -8,6 +8,11 @@ require("which-key").add({
   },
 
   {
+    mode = { "i" },
+    { "<C-k>", vim.lsp.buf.signature_help, desc = "LSP Signature Help (Type/Params)" },
+  },
+
+  {
     {
       "<leader>s",
       group = "Window",
@@ -34,6 +39,19 @@ require("which-key").add({
     { "bp", "<cmd>bprevious<cr>",                   desc = "Go to the previous buffer" },
     { "bn", "<cmd>bnext<cr>",                       desc = "Go to the next buffer" },
     { "bo", "<cmd>%bdelete | edit # | normal <cr>", desc = "Close all buffers except active one" },
+  },
+
+  {
+    {
+      "g",
+      group = "Git",
+    },
+    {
+      { "gd", "<cmd>DiffviewOpen HEAD~1<cr>",   desc = "Diff Last Commit" },
+      { "go", "<cmd>DiffviewOpen<cr>",          desc = "Diff Working Directory" },
+      { "gh", "<cmd>DiffviewFileHistory %<cr>", desc = "File History (Current File)" },
+      { "gx", "<cmd>DiffviewClose<cr>",         desc = "Close Diffview" },
+    },
   },
 
   {

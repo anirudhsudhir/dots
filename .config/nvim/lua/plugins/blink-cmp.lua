@@ -8,7 +8,7 @@ return {
 
     opts = {
       -- use mini_snippets instead of the default
-      snippets = { preset = 'mini_snippets' },
+      -- snippets = { preset = 'mini_snippets' },
 
       keymap = {
         preset = "default",
