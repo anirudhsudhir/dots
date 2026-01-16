@@ -1,9 +1,23 @@
 [tools]
+
+act = "latest"
+just = "latest"
+k3d = "latest"
+sqlc = "latest"
+
 go = ["latest"]
+golangci-lint = "latest"
+gofumpt = "latest"
+
 java = "lts"
+gradle = "latest"
+
 node = "lts"
+bun = "latest"
+
 python = "latest"
-mongodb = "8.1.2"
+
+mongodb = "latest"
 mongosh = "latest"
 
 [env]

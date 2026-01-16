@@ -13,5 +13,17 @@ return {
       functions = { italic = true },
       variables = { italic = true },
     },
-  }
+  },
+
+  {
+    "catppuccin/nvim",
+    name = "catppuccin"
+  },
+
+  {
+    "rose-pine/neovim",
+    name = "rose-pine"
+  },
+
+  { "EdenEast/nightfox.nvim" }
 }
