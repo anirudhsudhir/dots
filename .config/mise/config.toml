@@ -14,14 +14,12 @@ gradle = "latest"
 
 node = "lts"
 bun = "latest"
+deno = "latest"
 
+uv = "latest"
 python = "latest"
 
-mongodb = "latest"
-mongosh = "latest"
-
-[env]
-# _.python.venv = "{{env.PWD}}/.venv"
+rust = { version = "stable", targets = ["aarch64-apple-darwin", "aarch64-unknown-linux-gnu"] }
 
 [settings]
 python.uv_venv_auto = true
