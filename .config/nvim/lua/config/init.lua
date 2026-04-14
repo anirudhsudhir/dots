@@ -22,7 +22,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 vim.opt.incsearch = true
 
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("kanagawa-dragon")
 vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 
