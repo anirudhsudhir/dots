@@ -24,6 +24,8 @@ set -g __fish_git_prompt_char_untrackedfiles "✖"
 set -g __fish_git_prompt_char_conflictedstate "⚠︎"
 set -g __fish_git_prompt_char_cleanstate "✔"
 
+set -gx LDFLAGS "-L/opt/homebrew/opt/libomp/lib"
+set -gx CPPFLAGS "-I/opt/homebrew/opt/libomp/include"
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 
 starship init fish | source
@@ -47,14 +49,6 @@ end
 # <<< conda initialize <<<
 
 mise activate fish --quiet | source
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-test -r '/Users/anirudh/.opam/opam-init/init.fish' && source '/Users/anirudh/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
-# END opam configuration
 
 # uv
 fish_add_path "/Users/anirudh/.local/bin"

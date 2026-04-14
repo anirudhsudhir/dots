@@ -11,14 +11,13 @@ gofumpt = "latest"
 
 java = "lts"
 gradle = "latest"
+maven = "latest"
 
 node = "lts"
 bun = "latest"
 
+uv = "latest"
 python = "latest"
-
-mongodb = "latest"
-mongosh = "latest"
 
 [env]
 # _.python.venv = "{{env.PWD}}/.venv"
