@@ -4,16 +4,23 @@ return {
     -- Load before saving to ensure formatting happens first
     event = { "BufWritePre" },
     opts = {
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_format = "fallback", -- Use LSP formatters as fallback
-      },
+      format_on_save = function(bufnr)
+        -- Disabled globally (vim.g) or for this buffer (vim.b)
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+          return
+        end
+        return {
+          timeout_ms = 500,
+          lsp_format = "fallback", -- Use LSP formatters as fallback
+        }
+      end,
 
       formatters_by_ft = {
         rust = { "rustfmt" },
         go = { "goimports", "gofmt" },
         c = { "clang-format" },
         cpp = { "clang-format" },
+        -- ocaml = { "ocamlformat" },
         python = { "ruff" },
         sh = { "shfmt" },
         lua = { "stylua" },

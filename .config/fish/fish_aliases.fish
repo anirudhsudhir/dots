@@ -9,6 +9,8 @@ alias v='nvim'
 alias ssh_env='TERM=xterm-256color ssh'
 alias orb_env='TERM=xterm-256color orb'
 
+alias ompcompile='clang -Xpreprocessor -fopenmp -L/opt/homebrew/opt/libomp/lib -I/opt/homebrew/opt/libomp/include -lomp'
+
 bind \ce edit_command_buffer
 
 function f
