@@ -47,4 +47,11 @@ return {
     },
     lazy = false,
   },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.lsp.enable("ocamllsp")
+    end,
+  },
 }

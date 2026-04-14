@@ -1,27 +1,30 @@
 [tools]
 
+terraform = "latest"
+ansible = "latest"
+
 act = "latest"
 just = "latest"
-k3d = "latest"
+
 sqlc = "latest"
 
 go = ["latest"]
 golangci-lint = "latest"
 gofumpt = "latest"
 
-java = "lts"
-gradle = "latest"
+# java = "lts"
+# gradle = "latest"
 
 node = "lts"
 bun = "latest"
+deno = "latest"
 
 python = "latest"
+uv = "latest"
+pdm = "latest"
+pipx = "latest"
 
-mongodb = "latest"
-mongosh = "latest"
-
-[env]
-# _.python.venv = "{{env.PWD}}/.venv"
+rust = { version = "stable", targets = ["aarch64-apple-darwin", "aarch64-unknown-linux-gnu"] }
 
 [settings]
 python.uv_venv_auto = true
