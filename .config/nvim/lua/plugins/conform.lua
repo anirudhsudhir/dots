@@ -14,6 +14,7 @@ return {
         go = { "goimports", "gofmt" },
         c = { "clang-format" },
         cpp = { "clang-format" },
+        ocaml = { "ocamlformat" },
         python = { "ruff" },
         sh = { "shfmt" },
         lua = { "stylua" },

@@ -34,6 +34,7 @@ return {
         "html",
         "lua_ls",
         "neocmake",
+        "ocamllsp",
         "rust_analyzer",
         "tinymist",
         "ty",
@@ -46,5 +47,12 @@ return {
       "neovim/nvim-lspconfig",
     },
     lazy = false,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      vim.lsp.enable("ocamllsp")
+    end,
   },
 }
